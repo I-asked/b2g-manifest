@@ -1,34 +1,23 @@
 <?xml version="1.0" ?>
 <manifest>
 
-  <remote name="aosp" fetch="https://android.googlesource.com/" />
-  <remote name="apitrace" fetch="git://github.com/apitrace/"/>
-  <remote name="b2g" fetch="git://github.com/mozilla-b2g/"/>
-  <remote name="caf" fetch="git://codeaurora.org/"/>
-  <remote name="mozilla" fetch="git://github.com/mozilla/"/>
-  <remote name="mozillaorg" fetch="https://git.mozilla.org/releases"/>
+  <include name="base.xml"/>
+
   <remote name="tdz" fetch="git://github.com/tdz/"/>
 
-  <!-- Gaia and Gecko -->
-  <project name="gaia" path="gaia" remote="mozillaorg" revision="master"/>
-  <project name="gecko" path="gecko" remote="mozillaorg" revision="master"/>
-
-  <!-- Gonk-specific things -->
-  <project name="apitrace" path="external/apitrace" remote="apitrace" revision="master"/>
-  <project name="fake-libdvm" path="dalvik" remote="b2g" revision="master"/>
-  <project name="fake-qemu-kernel" path="prebuilts/qemu-kernel" remote="b2g" revision="master"/>
-  <project name="gonk-misc" path="gonk-misc" remote="tdz" revision="emulator-m"/>
-  <project name="librecovery" path="librecovery" remote="b2g" revision="master"/>
-  <project name="moztt" path="external/moztt" remote="b2g" revision="master"/>
+  <!-- B2G specific things. -->
   <project name="platform_build" path="build" remote="tdz" revision="b2g-6.0.0_r1">
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
-  <project name="platform_prebuilts_misc" path="prebuilts/misc" remote="tdz" revision="b2g-6.0.0_r1"/>
-  <!-- TODO: <project name="platform_system_bluetoothd" path="system/bluetoothd" remote="tdz" revision="emulator-m"/> -->
-  <project name="platform_system_libfdio" path="system/libfdio" remote="b2g" revision="master"/>
+  <project name="fake-libdvm" path="dalvik" remote="b2g" revision="master"/>
+  <project name="fake-qemu-kernel" path="prebuilts/qemu-kernel" remote="b2g" revision="master"/>
+  <remove-project name="gonk-misc"/>
+  <project name="gonk-misc" path="gonk-misc" remote="tdz" revision="emulator-m"/>
+  <project name="librecovery" path="librecovery" remote="b2g" revision="master"/>
   <project name="rilproxy" path="rilproxy" remote="b2g" revision="master"/>
   <project name="valgrind" path="external/valgrind" remote="b2g" revision="fxos"/>
   <project name="vex" path="external/VEX" remote="b2g" revision="fxos"/>
+  <project name="apitrace" path="external/apitrace" remote="apitrace" revision="master"/>
 
   <!-- Stock Android things -->
   <project groups="darwin" name="platform/prebuilts/python/darwin-x86/2.7.5" path="prebuilts/python/darwin-x86/2.7.5" />
@@ -143,10 +132,12 @@
   <project name="platform/libcore" path="libcore"/>
   <project name="platform/libnativehelper" path="libnativehelper"/>
   <project name="platform/ndk" path="ndk"/>
+  <project name="platform_prebuilts_misc" path="prebuilts/misc" remote="tdz" revision="b2g-6.0.0_r1"/>
   <project name="platform/prebuilts/ndk" path="prebuilts/ndk"/>
   <project name="platform/prebuilts/sdk" path="prebuilts/sdk"/>
   <project name="platform/prebuilts/tools" path="prebuilts/tools"/>
   <project name="platform/sdk" path="sdk"/>
+  <!-- TODO: <project name="platform_system_bluetoothd" path="system/bluetoothd" remote="tdz" revision="emulator-m"/> -->
   <project name="platform/system/core" path="system/core"/>
   <project name="platform/system/extras" path="system/extras"/>
   <project name="platform/system/gatekeeper" path="system/gatekeeper"/>
