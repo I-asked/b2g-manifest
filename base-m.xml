@@ -3,7 +3,6 @@
 
   <include name="base.xml"/>
 
-  <remote name="gabrielesvelto" fetch="git://github.com/gabrielesvelto/"/>
   <remote name="tdz" fetch="git://github.com/tdz/"/>
 
   <!-- B2G specific things. -->
