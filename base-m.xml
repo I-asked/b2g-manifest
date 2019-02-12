@@ -13,7 +13,7 @@
   <project name="fake-libdvm" path="dalvik" remote="b2g" revision="master"/>
   <project name="fake-qemu-kernel" path="prebuilts/qemu-kernel" remote="b2g" revision="master"/>
   <remove-project name="gonk-misc"/>
-  <project name="gonk-misc" path="gonk-misc" remote="tdz" revision="emulator-m"/>
+  <project name="gonk-misc" path="gonk-misc" remote="gabrielesvelto" revision="emulator-m"/>
   <project name="librecovery" path="librecovery" remote="b2g" revision="master"/>
   <project name="rilproxy" path="rilproxy" remote="b2g" revision="master"/>
   <project name="valgrind" path="external/valgrind" remote="b2g" revision="fxos"/>
