@@ -6,7 +6,7 @@
   <remote name="tdz" fetch="https://github.com/tdz/"/>
 
   <!-- B2G specific things. -->
-  <project name="platform_build" path="build" remote="tdz" revision="b2g-6.0.0_r1">
+  <project name="platform_build" path="build" remote="jula" revision="b2g-m">
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
   <project name="fake-libdvm" path="dalvik" remote="b2g" revision="master"/>

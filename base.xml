@@ -13,6 +13,7 @@
   <remote name="linaro" fetch="https://android.git.linaro.org/git-ro/" />
   <remote name="mozilla" fetch="https://github.com/mozilla/" />
   <remote name="kaios" fetch="https://github.com/kaiostech/" />
+  <remote name="jula" fetch="https://github.com/I-asked/" />
 
   <!--
     B2G repositories for all targets
