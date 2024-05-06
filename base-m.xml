@@ -3,7 +3,7 @@
 
   <include name="base.xml"/>
 
-  <remote name="tdz" fetch="git://github.com/tdz/"/>
+  <remote name="tdz" fetch="https://github.com/tdz/"/>
 
   <!-- B2G specific things. -->
   <project name="platform_build" path="build" remote="tdz" revision="b2g-6.0.0_r1">
